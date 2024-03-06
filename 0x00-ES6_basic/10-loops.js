@@ -3,7 +3,7 @@ export default function appendToEachArrayValue(array, appendString) {
 
   for (const idx of array) {
     if (idx) {
-    myNewArray.push(appendString + idx);
+      myNewArray.push(appendString + idx);
     }
   }
 
