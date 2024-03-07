@@ -1,5 +1,5 @@
 export default function getFullResponseFromAPI(success) {
-  const newObject = new Promise((resolve, reject) => {
+  const myNewObject = new Promise((resolve, reject) => {
     if (success) {
       resolve({
         status: 200,
@@ -10,5 +10,5 @@ export default function getFullResponseFromAPI(success) {
     }
   });
 
-  return newObject;
+  return myNewObject;
 }
