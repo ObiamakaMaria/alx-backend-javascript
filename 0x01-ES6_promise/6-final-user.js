@@ -6,20 +6,20 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     signUpUser(firstName, lastName),
     uploadPhoto(fileName),
   ]).then((returnPromises) => {
-    const myArray = [];
+    const myNewArray = [];
 
     for (const object of returnPromises) {
-      const tmpDict = {};
-      tmpDict.status = object.status;
+      const myTempDict = {};
+      myTempDict.status = object.status;
 
       if (object.status === 'rejected') {
-        tmpDict.value = `${object.reason}`;
+        myTempDict.value = `${object.reason}`;
       } else {
-        tmpDict.value = object.value;
+        myTempDict.value = object.value;
       }
-      myArray.push(tmpDict);
+      myNewArray.push(myTempDict);
     }
 
-    return myArray;
+    return myNewArray;
   });
 }
