@@ -1,9 +1,9 @@
 export default function getResponseFromAPI() {
   const newProomiseObject = new Promise((resolve, reject) => {
-    const i = 5;
+    const j = 5;
 
-    if (i > 2) {
-      resolve('I is 2');
+    if (j > 2) {
+      resolve('This is a test');
     } else {
       reject(RangeError);
     }
