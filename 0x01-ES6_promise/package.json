@@ -1,0 +1,12 @@
+{
+  "name": "0x01-es6_promise",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "ALX BACKEND PROMISES TASKS",
+  "main": "1-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
