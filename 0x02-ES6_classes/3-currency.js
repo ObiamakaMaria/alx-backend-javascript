@@ -1,7 +1,7 @@
 export default class Currency {
   constructor(code, name) {
-    this._verifyString(code, 'code');
-    this._verifyString(name, 'name');
+    this._verification(code, 'code');
+    this._verification(name, 'name');
   }
 
   get code() {
@@ -9,7 +9,7 @@ export default class Currency {
   }
 
   set code(code) {
-    this._verifyString(code, 'code');
+    this._verification(code, 'code');
   }
 
   get name() {
@@ -17,22 +17,22 @@ export default class Currency {
   }
 
   set name(name) {
-    this._verifyString(name, 'name');
+    this._verification(name, 'name');
   }
 
   displayFullCurrency() {
     return (`${this.name} (${this.code})`);
   }
 
-  _verifyString(element, desc) {
-    if (typeof element === 'string') {
-      if (desc === 'code') {
-        this._code = element; /* eslint no-underscore-dangle: 0 */
+  _verification(value, type) {
+    if (typeof value === 'string') {
+      if (type === 'code') {
+        this._code = value; /* eslint no-underscore-dangle: 0 */
       } else {
-        this._name = element;
+        this._name = value;
       }
     } else {
-      throw new TypeError('Element must be a string');
+      throw new TypeError('Value must be a string');
     }
   }
 }
