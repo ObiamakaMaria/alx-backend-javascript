@@ -1,6 +1,6 @@
 export default class Building {
   constructor(sqft) {
-    this._verifySQFT(sqft);
+    this._SQFT(sqft);
 
     if (new.target !== Building) {
       this.evacuationWarningMessage();
@@ -12,14 +12,14 @@ export default class Building {
   }
 
   set sqft(sqft) {
-    this._verifySQFT(sqft);
+    this._SQFT(sqft);
   }
 
   get sqft() {
     return this._sqft;
   }
 
-  _verifySQFT(sqft) {
+  _SQFT(sqft) {
     if (typeof sqft === 'number') {
       this._sqft = sqft; /* eslint no-underscore-dangle: 0 */
     } else {
