@@ -1,0 +1,23 @@
+{
+  "name": "0x03-es6_data_manipulation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "ES6 BACKEND DATA MANIPULATION PROJECT",
+  "main": "0-get_list_students.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1"
+  },
+  "dependencies": {
+    "eslint-tester": "^0.8.2"
+  }
+}
