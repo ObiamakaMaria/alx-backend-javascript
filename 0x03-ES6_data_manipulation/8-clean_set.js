@@ -1,16 +1,13 @@
-export default function cleanSet(set, startString) {
-  const newArray = [];
-  set.forEach((element) => {
-    let elem;
+const cleanSet = (set, startString) => {
+  const strings = [];
 
-    if (element.startsWith(startString)) {
-      const idx = element.indexOf(startString);
-      elem = element.substring(startString.length - 1);
-      console.log(idx);
-      newArray.push(elem);
+  if (startString === '' || typeof startString !== 'string') return '';
+  set.forEach((s) => {
+    if (typeof s === 'string' && s.startsWith(startString)) {
+      strings.push(s.slice(startString.length));
     }
-    return elem;
-    });
+  });
+  return strings.join('-');
+};
 
-  return newArray.join('-');
-}
+export default cleanSet;
