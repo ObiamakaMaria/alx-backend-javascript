@@ -11,8 +11,8 @@ const { readFile } = require('fs');
  * - For the path '/students', responds with 'This is the 
  *   list of our students'
  *   followed by the contents of a specified CSV file.
- *   The CSV file is read asynchronously, and its contents are
- *   processed to count
+ *   The CSV file is read asynchronously, and its contents 
+ *   are processed to count
  *   and display student details grouped by fields.
  * @param {string} path - The path to the CSV file containing
  * student data.
@@ -43,7 +43,7 @@ function countStudents(path) {
         for (const line of lines) {
           if (isFirstLine) {
             isFirstLine = false;
-            continue; // Skip header line
+            continue; // eslint-disable-line
           }
           const student = line.split(',');
           if (!fields[student[3]]) {
