@@ -1,11 +1,15 @@
 const fs = require('fs');
 
 /**
- * Reads and analyzes a database file asynchronously to count students and their details.
+ * Reads and analyzes a database file asynchronously to count
+ * students and their details.
  * @param {string} path - The path to the database file.
- * @returns {Promise<void>} A promise that resolves when the database is successfully processed.
- * @throws {Error} Throws an error if the database file cannot be loaded.
+ * @returns {Promise<void>} A promise that resolves when the 
+ * database is successfully processed.
+ * @throws {Error} Throws an error if the database file cannot
+ * be loaded.
  */
+
 function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, { encoding: 'utf8' }, (err, info) => {
@@ -21,7 +25,7 @@ function countStudents(path) {
         for (const line of lines) {
           if (isFirstLine) {
             isFirstLine = false;
-            continue; // Skip header line
+            continue; // eslint-disable-line
           }
           const student = line.split(',');
           if (!fields[student[3]]) {
