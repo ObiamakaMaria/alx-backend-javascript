@@ -4,7 +4,7 @@ const fs = require('fs');
  * Reads and analyzes a database file asynchronously to count
  * students and their details.
  * @param {string} path - The path to the database file.
- * @returns {Promise<void>} A promise that resolves when the 
+ * @returns {Promise<void>} A promise that resolves when the
  * database is successfully processed.
  * @throws {Error} Throws an error if the database file cannot
  * be loaded.
