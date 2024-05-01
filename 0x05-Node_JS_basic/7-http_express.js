@@ -43,7 +43,7 @@ function countStudents(path) {
         for (const line of lines) {
           if (isFirstLine) {
             isFirstLine = false;
-            continue; // Skip header line
+            continue; // eslint-disable-line
           }
           const student = line.split(',');
           if (!fields[student[3]]) {
@@ -66,8 +66,10 @@ function countStudents(path) {
 
 app.get('/students', (req, res) => {
   countStudents(process.argv[2]).then((data) => {
+    // console.log(data);
     res.send(`This is the list of our students\n${data}`);
   }).catch(() => {
+    // console.error(error);
     res.send('Cannot load or read the database');
   });
 });
