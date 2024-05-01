@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 /**
- * Counts the number of students and their details from a 
+ * Counts the number of students and their details from a
  * database file.
  * @param {string} path - The path to the database file.
  * @throws {Error} Throws an error if the database file ca     * nnot be loaded.
