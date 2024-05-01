@@ -17,8 +17,8 @@ const { readFile } = require('fs');
  * @param {string} path - The path to the CSV file containing
  * student data.
  * @returns {http.Server} The created HTTP server instance.
- * @throws {Error} Throws an error if the database file cannot
- * be loaded.
+ * @throws {Error} Throws an error if the database file
+ * cannot be loaded.
  */
 const port = 1245;
 
