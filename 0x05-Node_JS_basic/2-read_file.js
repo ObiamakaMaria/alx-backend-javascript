@@ -1,10 +1,12 @@
 const fs = require('fs');
 
 /**
- * Counts the number of students and their details from a database file.
+ * Counts the number of students and their details from a 
+ * database file.
  * @param {string} path - The path to the database file.
- * @throws {Error} Throws an error if the database file cannot be loaded.
+ * @throws {Error} Throws an error if the database file ca     * nnot be loaded.
  */
+
 function countStudents(path) {
   try {
     const info = fs.readFileSync(path, { encoding: 'utf8' });
@@ -17,7 +19,7 @@ function countStudents(path) {
     for (const line of lines) {
       if (isFirstLine) {
         isFirstLine = false;
-        continue; // Skip header line
+        continue; // eslint-disable-line
       }
       const student = line.split(',');
       if (!fields[student[3]]) {
