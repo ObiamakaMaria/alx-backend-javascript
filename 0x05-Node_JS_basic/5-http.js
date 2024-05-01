@@ -4,15 +4,21 @@ const { readFile } = require('fs');
 
 /**
  * Creates an HTTP server using the http module.
- * The server listens on port 1245 and handles specific endpoints:
- * - For the path '/', responds with 'Hello Holberton School!' in plain text.
- * - For the path '/students', responds with 'This is the list of our students'
+ * The server listens on port 1245 and handles specific 
+ * endpoints:
+ * - For the path '/', responds with 'Hello Holberton School!'
+ *   in plain text.
+ * - For the path '/students', responds with 'This is the 
+ *   list of our students'
  *   followed by the contents of a specified CSV file.
- *   The CSV file is read asynchronously, and its contents are processed to count
+ *   The CSV file is read asynchronously, and its contents are
+ *   processed to count
  *   and display student details grouped by fields.
- * @param {string} path - The path to the CSV file containing student data.
+ * @param {string} path - The path to the CSV file containing
+ * student data.
  * @returns {http.Server} The created HTTP server instance.
- * @throws {Error} Throws an error if the database file cannot be loaded.
+ * @throws {Error} Throws an error if the database file cannot
+ * be loaded.
  */
 const port = 1245;
 
